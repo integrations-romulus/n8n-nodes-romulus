@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/integrations-romulus/n8n-nodes-romulus.git"
+		"url": "git+https://github.com/integrations-romulus/n8n-nodes-romulus.git"
 	},
 	"engines": {
 		"node": ">=20.15"
