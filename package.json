@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-romulus",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"description": "Romulus n8n nodes integration",
 	"keywords": [
 		"n8n-community-node-package"
