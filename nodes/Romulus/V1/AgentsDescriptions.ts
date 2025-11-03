@@ -159,7 +159,7 @@ export const agentFields: INodeProperties[] = [
 		description: 'Select the agent to make the call. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
 	},
 	{
-		displayName: 'to Phone Number',
+		displayName: 'To Phone Number',
 		name: 'to',
 		type: 'string',
 		placeholder: '+1234567890',
