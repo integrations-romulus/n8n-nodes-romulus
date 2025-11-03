@@ -2,7 +2,7 @@
 
 **n8n-nodes-romulus** is an n8n community node that enables you to interact with the **Romulus API** within your n8n workflows.
 
-[Romulus](https://romulus.live) is a tool integrated with Voxloud that delivers an automated phone call experience. It provides APIs to manage robocalls, AI agents, and messaging bots for seamless communication workflows.
+[Romulus](https://romulus.live) is a communication automation platform that delivers an automated phone call experience. It provides APIs to manage robocalls, AI agents, and messaging bots for seamless communication workflows.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform that lets you connect services and automate tasks visually.
 
@@ -51,15 +51,12 @@ This node currently supports the following Romulus operations:
 
 ## Credentials
 
-To use this node, you’ll need a **Romulus API key**.
+To use this node, you'll need a **Romulus API key**.
 
-1. Sign in to your [Voxloud](https://voxloud.com) account.
-2. Go to **Integrations → Romulus** and set up the Romulus integration.
-3. Once configured, you will be given a **Romulus API key**.
-4. In **n8n**, navigate to **Credentials > Create New > Romulus API** and enter your API key.
-5. n8n will automatically test the connection.
-
-> ⚠️ Note: While the API key is obtained from Voxloud, it authenticates directly with the **Romulus API**. All requests in this node are sent to `https://api.romulus.live`.
+1. Sign in to your [Romulus](https://romulus.live) account.
+2. Follow the instructions at [How to use the AI Agent with third-party software via API](https://help.romulus.live/en/articles/12547432-how-to-use-the-ai-agent-with-third-party-software-via-api) to generate your API key.
+3. In **n8n**, navigate to **Credentials > Create New > Romulus API** and enter your API key.
+4. n8n will automatically test the connection.
 
 ---
 

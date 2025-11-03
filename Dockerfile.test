@@ -1,0 +1,30 @@
+# Dockerfile for testing n8n-nodes-romulus locally
+FROM n8nio/n8n:latest
+
+# Switch to root to install packages
+USER root
+
+# Create directory for custom nodes
+RUN mkdir -p /root/.n8n/custom
+
+# Copy the built node package
+COPY dist /root/.n8n/custom/n8n-nodes-romulus/dist
+COPY package.json /root/.n8n/custom/n8n-nodes-romulus/package.json
+COPY credentials /root/.n8n/custom/n8n-nodes-romulus/credentials
+COPY nodes /root/.n8n/custom/n8n-nodes-romulus/nodes
+
+# Install the custom node
+WORKDIR /root/.n8n/custom/n8n-nodes-romulus
+RUN npm install --omit=dev
+
+# Set environment variable to load custom nodes
+ENV N8N_CUSTOM_EXTENSIONS="/root/.n8n/custom"
+
+# Switch back to node user
+USER node
+
+# Expose n8n port
+EXPOSE 5678
+
+# Start n8n
+CMD ["n8n"]

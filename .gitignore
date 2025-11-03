@@ -1,8 +1,27 @@
+# Dependencies
 node_modules
+
+# Build output
+dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS
 .DS_Store
 .tmp
 tmp
-dist
-npm-debug.log*
-yarn.lock
+
+# Editor
 .vscode/launch.json
+.idea
+
+# Lock files
+yarn.lock
+
+# Docker volumes (if using docker-compose)
+# Uncomment if you want to ignore n8n data
+# n8n_data

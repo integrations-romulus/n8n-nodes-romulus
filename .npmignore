@@ -1,2 +1,46 @@
+# The package.json "files" field already limits what gets published to just "dist/",
+# but .npmignore provides an additional safety layer to exclude dev/test files
+
+# Development and testing files
+*.sh
+docker-compose.yml
+Dockerfile*
+*-TESTING.md
+GET-STARTED.md
+CLAUDE.md
+
+# Source files (only dist/ should be published)
+nodes/
+credentials/
+*.ts
+!*.d.ts
+tsconfig.json
+
+# Development tools
+.editorconfig
+.prettierrc.js
+.eslintrc*.js
+gulpfile.js
+
+# Git
+.git
+.gitignore
+
+# OS
 .DS_Store
 *.tsbuildinfo
+
+# CI/CD
+.github/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs and temp
+*.log
+.tmp
+tmp
+
+# Dependencies (never publish)
+node_modules/

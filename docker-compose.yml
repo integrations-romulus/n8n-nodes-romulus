@@ -14,11 +14,12 @@ services:
       - TZ=Asia/Bangkok
       - EXECUTIONS_DATA_PRUNE=true
       - EXECUTIONS_DATA_MAX_AGE=90
+      - N8N_CUSTOM_EXTENSIONS=/home/node/.n8n/custom
     ports:
       - "5678:5678"
     volumes:
       - n8n_data:/home/node/.n8n
-      - ./dist:/home/node/.n8n/custom
+      - ./:/home/node/.n8n/custom/n8n-nodes-romulus:ro
 
 volumes:
   n8n_data:

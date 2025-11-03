@@ -12,28 +12,13 @@ export class RomulusApi implements ICredentialType {
 		'https://developer.romulus.live/docs/#authentication';
 	properties: INodeProperties[] = [
 		{
-			displayName: 'Authentication',
-			name: 'authentication',
-			type: 'options',
-			options: [
-				{
-					name: 'API Key',
-					value: 'apiKey',
-				},
-			],
-			default: 'apiKey',
-		},
-		{
 			displayName: 'API Key',
 			name: 'apiKey',
 			type: 'string',
 			typeOptions: { password: true },
 			default: '',
-			displayOptions: {
-				show: {
-					authentication: ['apiKey'],
-				},
-			},
+			required: true,
+			description: 'Your Romulus API key. See <a href="https://help.romulus.live/en/articles/12547432-how-to-use-the-ai-agent-with-third-party-software-via-api">documentation</a> for how to obtain it.',
 		},
 	];
 	authenticate: IAuthenticateGeneric = {

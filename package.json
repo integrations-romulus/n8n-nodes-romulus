@@ -1,19 +1,30 @@
 {
 	"name": "n8n-nodes-romulus",
-	"version": "0.1.6",
-	"description": "Romulus n8n nodes integration",
+	"version": "0.1.2",
+	"description": "n8n nodes for Romulus communication automation platform - manage AI agents, robocalls, and WhatsApp messaging",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"romulus",
+		"ai-agent",
+		"robocall",
+		"whatsapp",
+		"automation",
+		"communication",
+		"telephony",
+		"webhook"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/integrations-romulus/n8n-nodes-romulus",
+	"homepage": "https://www.romulus.live",
 	"author": {
-		"name": "Romulus Integrations",
-		"email": "integrations@romulus.live"
+		"name": "Romulus Ventures LLC",
+		"email": "support@romulus.live"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/integrations-romulus/n8n-nodes-romulus.git"
+    "url": "https://github.com/integrations-romulus/n8n-nodes-romulus"
+	},
+	"bugs": {
+		"url": "https://github.com/integrations-romulus/n8n-nodes-romulus/issues"
 	},
 	"engines": {
 		"node": ">=20.15"
