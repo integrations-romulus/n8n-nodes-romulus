@@ -65,8 +65,5 @@
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
-	},
-	"dependencies": {
-		"n8n-nodes-romulus": "^1.3.0"
 	}
 }
