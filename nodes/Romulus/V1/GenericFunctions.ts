@@ -4,7 +4,7 @@ import {
 	type ILoadOptionsFunctions,
 	type IHttpRequestMethods,
 	type IDataObject,
-	type IRequestOptions,
+	type IHttpRequestOptions,
 	NodeApiError,
 	JsonObject,
 } from 'n8n-workflow';
@@ -59,19 +59,18 @@ export async function romulusApiRequest(
 	query: IDataObject = {},
 	uri?: string,
 ): Promise<any> {
-	const options = {
+	const options: IHttpRequestOptions = {
 		method,
 		qs: query,
 		headers: {},
-		uri: uri || `https://api.romulus.live/v1${endpoint}`,
+		url: uri || `https://api.romulus.live/v1${endpoint}`,
 		body,
 		json: true,
-		useQuerystring: true,
-	} satisfies IRequestOptions;
+	};
 
 	try {
 		const credentialType = 'romulusApi';
-		return await this.helpers.requestWithAuthentication.call(this, credentialType, options);
+		return await this.helpers.httpRequestWithAuthentication.call(this, credentialType, options);
 	} catch (error: any) {
 		// Provide more specific error messages based on HTTP status codes
 		if (error.statusCode === 401 || error.httpCode === '401') {
