@@ -628,7 +628,7 @@ export class RomulusV1 implements INodeType {
 				}
 			}
 
-			returnData.push({ json: responseData });
+			returnData.push({ json: responseData, pairedItem: { item: i } });
 		}
 
 		return this.prepareOutputData(returnData);
